@@ -1,11 +1,48 @@
-/* Import font and reset styles */
-body,
-h1,
-h2,
-p {
+/* Style for the SOD Project link, similar to the theme switcher */
+.project-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem; /* Make it slightly larger */
   margin: 0;
-  padding: 0;
-  font-family: "Overpass Mono", monospace;
+}
+
+.project-link a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link a.dark {
+  background-color: #fff;
+  color: #000;
+}
+
+.project-link a.light {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Adjust the base theme switcher button styles */
+#theme-switcher,
+.theme-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-switcher.light,
+.theme-switcher.light {
+  background-color: #000;
+  color: #fff;
 }
 
 /* Basic styles for the body */
@@ -57,23 +94,6 @@ header.light input {
   color: #000;
 }
 
-#theme-switcher {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#theme-switcher.dark {
-  background-color: #000;
-  color: #fff;
-}
-
 /* Main content styles */
 main {
   padding: 2rem;
@@ -87,7 +107,6 @@ article.book {
   padding: 1rem;
   border: 1px solid #333;
   border-radius: 5px;
-  position: relative;
   transition: background 0.3s, color 0.3s;
 }
 
@@ -148,77 +167,6 @@ article.book.light .hashtag {
   color: #000;
 }
 
-/* Download dropdown styles */
-.download-dropdown {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.download-content {
-  display: none;
-  position: absolute;
-  background-color: #222;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.download-content a {
-  color: #fff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.download-content a:hover {
-  background-color: #333;
-}
-
-.download-btn {
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.download-btn:hover {
-  background-color: #ccc;
-}
-
-article.book.light .download-btn {
-  background-color: #000;
-  color: #fff;
-}
-
-article.book.light .download-btn:hover {
-  background-color: #444;
-}
-
-article.book.light .download-content {
-  background-color: #fff;
-}
-
-article.book.light .download-content a {
-  color: #000;
-}
-
-article.book.light .download-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show dropdown menu */
-.download-dropdown:hover .download-content {
-  display: block;
-}
-
 /* Footer styles */
 footer {
   text-align: center;
@@ -241,7 +189,6 @@ footer.light {
   main {
     padding: 1rem;
   }
-
   article.book {
     padding: 0.5rem;
   }
