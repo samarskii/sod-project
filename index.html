@@ -1,22 +1,56 @@
-<!DOCTYPE <!DOCTYPE html>
-[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]
-[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]
-[if IE 8]>         <html class="no-js lt-ie9"> <![endif]
-[if gt IE 8]>      <html class="no-js"> <![endif]
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        [if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]
-        
-        <script src="" async defer></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOD Project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
+    <header class="dark">
+      <h1>SOD Project</h1>
+      <p>
+        Here you can find some books about Religion, Philosophy, Technology, and
+        Educational topics in English, Polish, Ukrainian, and Russian for free.
+      </p>
+      <input type="text" id="search-bar" placeholder="Search for books..." />
+      <button id="theme-switcher" class="theme-switcher dark">
+        Switch Theme
+      </button>
+    </header>
+    <main id="book-list">
+      <!-- Book entries will go here -->
+      <article class="book dark">
+        <h2>Sentences Porphyry</h2>
+        <p>
+          Author:
+          <a href="author.html?name=Isaak%20Samarskyi">Isaak Samarskyi</a>
+        </p>
+        <p>Description: A brief description of Book Title 1.</p>
+        <p>
+          Tags: <span class="hashtag">#Philosophy</span>
+          <span class="hashtag">#Religion</span>
+        </p>
+        <div class="download-dropdown">
+          <button class="download-btn">Download</button>
+          <div class="download-content">
+            <a href="books/Sentences_Porphyry_SOD_Project.pdf" download>PDF</a>
+            <a href="books/Sentences_Porphyry_SOD_Project.epub" download
+              >EPUB</a
+            >
+            <a href="books/Sentences_Porphyry_SOD_Project.fb2" download>FB2</a>
+          </div>
+        </div>
+      </article>
+      <!-- Add more books as needed -->
+    </main>
+    <footer class="dark">
+      <p>&copy; SOD Project 2024</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
